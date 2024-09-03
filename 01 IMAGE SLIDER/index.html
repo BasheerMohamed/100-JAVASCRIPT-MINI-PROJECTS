@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Remixicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="image-slider">
+        <div class="top-bar">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+        <div class="slide-image">
+            <img class="slide" src="./IMAGES/21303285_a0i1_4xpy_210723.jpg">
+            <img class="slide" src="./IMAGES/9431539_4186790.jpg">
+            <img class="slide" src="./IMAGES/9978259_4322908.jpg">
+            <img class="slide" src="./IMAGES/16715103_5767005.jpg">
+            <img class="slide" src="./IMAGES/9431531_4186797.jpg">
+        </div>
+        <div class="indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <button onclick="goPrev()" class="prev"><i class="ri-arrow-left-s-line"></i></button>
+        <button onclick="goNext()" class="next"><i class="ri-arrow-right-s-line"></i></button>
+    </div>
+    <!-- Link Script -->
+    <script src="./script.js"></script>
+</body>
+</html>
