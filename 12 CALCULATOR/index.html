@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Neumorphism Effect Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="status-bar">
+            <span id="time">
+                <script>
+                    var time = document.getElementById('time').innerHTML;
+                    var today = new Date();
+                    var time = today.getHours() + ":" + today.getMinutes();
+                    time = document.write(time)
+                </script>
+            </span>
+            <div class="notch"></div>
+            <div class="camera"></div>
+            <div class="side-icon">
+                <i class="ri-wifi-line"></i>
+                <i class="ri-battery-low-line"></i>
+            </div>
+        </div>
+        <input type="text" id="displayResult" name="displayResult" class="area">
+        <div class="key-container">
+            <div class="first-col">
+                <button id="clearBtn" onclick="displayResult.value = ' '">AC</button>
+                <button onclick="display('7')">7</button>
+                <button onclick="display('4')">4</button>
+                <button onclick="display('1')">1</button>
+                <button onclick="display('0')">0</button>
+            </div>
+            <div class="second-col">
+                <button id="negativePlusBtn"  onclick="makeNegative(displayResult.value)">+/-</button>
+                <button onclick="display('8')">8</button>
+                <button onclick="display('5')">5</button>
+                <button onclick="display('2')">2</button>
+                <button onclick="display('.')">.</button>
+            </div>
+            <div class="third-col">
+                <button onclick="display('%')" id="percentageBtn">%</button>
+                <button onclick="display('9')">9</button>
+                <button onclick="display('6')">6</button>
+                <button onclick="display('3')">3</button>
+                <button onclick="display('+')">+</button>
+            </div>
+            <div class="fourth-col">
+                <button id="divideBtn" onclick="display('/')"><i class="ri-divide-line"></i></button>
+                <button id="backBtn" onclick="display('*')"><i class="ri-close-line"></i></button>
+                <button id="minusBtn" onclick="display('-')">-</button>
+                <button id="equalBtn" onclick="(displayResult.value.includes('%'))?percentage(displayResult.value):displayResult.value=eval(displayResult.value);">=</button>
+            </div>
+        </div>
+        <div class="bottomBtn">
+            <i class="ri-square-line"></i>
+            <i class="ri-circle-line"></i>
+            <i class="ri-arrow-left-s-line"></i>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

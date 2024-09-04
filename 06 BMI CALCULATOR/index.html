@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer" />
+    <title>BMI Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">BMI Calculator</h1>
+    <div class="age-container">
+      <h5 class="age-text">Age</h5>
+      <input type="number" id="input-age">
+    </div>
+    <div class="gender-container">
+      <div class="male">
+        <input type="radio" name="gender" id="male">
+        <span>Male</span>
+      </div>
+      <div class="female">
+        <input type="radio" name="gender" id="female">
+        <span>Female</span>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="weight">
+        <h5 class="weight-text">Weight</h5>
+        <input type="number" id="weight" placeholder="0" maxlength="5">
+        <h5 class="kg">kg</h5>
+      </div>
+      <div class="height">
+        <h5 class="height-text">Height</h5>
+        <input type="number" id="height" placeholder="0" maxlength="5">
+        <h5 class="cm">cm</h5>
+      </div>
+    </div>
+
+    <button id="calculate-bmi" onclick="calculate()">Calculate BMI</button>
+
+    <div class="bmi">
+      <h5 class="value-text">Your BMI value is</h5>
+      <h5 class="bmi-value"><span id="bmi-value">00.00</span> kg/m<sup>2</sup></h5>
+      <h5 class="result-text">You are <span id="bmi-result">Healthy</span></h5>
+    </div>
+  </div>
+
+  <div class="modal-container" id="modalContainer">
+    <div class="modal-content">
+      <span><i class="ri-alert-fill"></i> Please provide input.</span>
+      <button class="close-btn" onclick="closeModal()"><i class="ri-close-circle-fill"></i></button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

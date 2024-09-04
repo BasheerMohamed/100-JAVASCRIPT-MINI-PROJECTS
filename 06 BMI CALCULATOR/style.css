@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap');
+
+:root {
+  --blue: #136a8a;
+  --green: #267871;
+  --input-background: rgba(119, 136, 153, 0.15);
+  --input-border: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Beiruti", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 450px;
+  display: grid;
+  gap: 20px;
+  box-shadow: 0 0 5px var(--shadow-1), 0 5px 10px var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.age-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.age-text {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: default;
+  font-weight: 700;
+}
+
+#input-age {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
+  outline: none;
+  caret-color: #267871;
+  color: #267871;
+  font-weight: 700;
+}
+
+ input::-webkit-inner-spin-button,
+ input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.gender-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.gender-container span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-left: 10px;font-weight: 700;
+  cursor: default;
+}
+
+input[type=radio] {
+  border: none;
+  width: 15px;
+  height: 15px;
+  accent-color: var(--green);
+}
+
+.weight, .height {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border)
+}
+
+.height {
+  margin-top: 10px;
+}
+
+.weight-text, .height-text, .kg, .cm {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+#weight, #height {
+  text-align: end;
+  width: 66%;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  color: var(--green);
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: transparent;
+  caret-color: var(--green);
+}
+
+#calculate-bmi {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--green);
+  border-radius: 5px;
+  border: 2px solid var(--green);
+  outline: none;
+  padding: 8px 0;
+  margin-top: 12px;
+}
+
+#calculate-bmi:hover {
+  background-color: white;
+  color: var(--green);
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.bmi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.value-text, .result-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+  word-spacing: 4px;
+  text-align: center;
+  cursor: default;
+}
+
+.bmi-value {
+  font-size: 2rem;
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: var(--green);
+  word-spacing: 6px;
+  cursor: default;
+}
+
+.result-text {
+  display: none;
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding: 8px 0;
+}
+
+#bmi-result {
+  color: var(--green);
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+  justify-content: center;
+  align-items: start;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 5px;
+  width: 40%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  cursor: default;
+}
+
+.modal-content i {
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.modal-content span {
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.close-btn {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: var(--green);
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media only screen and (max-width : 768px) {
+	.modal-content {
+		width: 80%;
+	}
+}

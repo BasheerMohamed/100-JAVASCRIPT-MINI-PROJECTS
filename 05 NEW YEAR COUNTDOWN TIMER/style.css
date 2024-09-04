@@ -1,0 +1,87 @@
+/* Google Fonts 'Kode Mono', 'Margarine' & 'Rajdhani' */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Margarine&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --body-Background: linear-gradient(to right, #414345, #232526);
+    --Text-Color: #fff;
+    --Box-Color: #414345;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-Background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.countdown-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120px;
+    font-weight: 1000;
+    color: var(--Text-Color);
+    text-align: center;
+}
+
+.timer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250px;
+    font-weight: 1000;
+    color: var(--Text-Color);
+    margin-top: -110px;
+    text-align: center;
+}
+
+.inspiration-text {
+    color: var(--Text-Color);
+    font-family: "Margarine", sans-serif;
+    text-align: center;
+    font-size: 80px;
+    margin-top: 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+}
+
+.timer .box {
+    background-color: var(--Box-Color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.timer .box .number {
+    font-size: 130px;
+    font-family: "Rajdhani", sans-serif;
+    color: var(--Text-Color);
+    text-align: center;
+}
+
+.timer .box .text {
+    font-size: 30px;
+    font-family: "Kode Mono", monospace;
+    color: var(--Text-Color);
+    text-align: center;
+}
+
+.timer .colon {
+    font-size: 100px;
+    font-family: monospace;
+    color: var(--Text-Color);
+}

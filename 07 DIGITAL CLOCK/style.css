@@ -1,0 +1,90 @@
+/* Google Fonts 'Rajdhani' */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --white: #fff;
+    --Body-Background: linear-gradient(45deg, #08001f, #30197d);
+    --pink: #f41b75;
+    --purple: #8f0dc2;
+    --Box-Background: rgba(255, 255, 255, 0.18);
+    --Box-Shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --Box-Border: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    color: var(--white);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Body-Background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    display: flex;
+    color: var(--white);
+    border-radius: 10px;
+    background: var(--Box-Background);
+    box-shadow: var(--Box-Shadow);
+    backdrop-filter: blur(30px);
+    border: var(--Box-Border);
+}
+
+.hrs, .min, .sec, .mdm {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: transparent;
+    font-size: 120px;
+    line-height: 200px;
+}
+
+.colon {
+    font-family: monospace;
+    font-size: 80px;
+    line-height: 180px;
+}
+
+/* ---------- Pink Square ---------- */
+
+.container::before {
+    content: '';
+    width: 220px;
+    height: 220px;
+    background-color: var(--pink);
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    left: -80px;
+    top: -80px;
+}
+
+/* ---------- Purple Circle ---------- */
+
+.container::after {
+    content: '';
+    width: 270px;
+    height: 270px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    right: -90px;
+    bottom: -90px;
+}
